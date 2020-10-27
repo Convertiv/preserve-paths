@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains DrupalComposer\PreservePaths\Plugin.
+ * Contains Convertiv\PreservePaths\Plugin.
  */
 
-namespace DrupalComposer\PreservePaths;
+namespace Convertiv\PreservePaths;
 
 use Composer\Composer;
 use Composer\DependencyResolver\Operation\InstallOperation;
@@ -37,7 +37,7 @@ class PluginWrapper
     protected $filesystem;
 
     /**
-     * @var \DrupalComposer\PreservePaths\PathPreserver[string]
+     * @var \Convertiv\PreservePaths\PathPreserver[string]
      */
     protected $preservers;
 
@@ -109,8 +109,8 @@ class PluginWrapper
             $packages = array($operation->getPackage());
         } elseif ($operation instanceof UpdateOperation) {
             $packages = array(
-            $operation->getInitialPackage(),
-            $operation->getTargetPackage(),
+                $operation->getInitialPackage(),
+                $operation->getTargetPackage(),
             );
         } elseif ($operation instanceof UninstallOperation) {
             $packages = array($operation->getPackage());
@@ -188,7 +188,7 @@ class PluginWrapper
         $return = array();
         foreach ($paths as $path) {
             if (!$this->filesystem->isAbsolutePath($path)) {
-                $path = getcwd().'/'.$path;
+                $path = getcwd() . '/' . $path;
             }
             $return[] = $path;
         }

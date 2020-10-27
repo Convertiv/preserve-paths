@@ -1,5 +1,5 @@
 {
-  "name": "drupal-composer/preserve-paths",
+  "name": "convertiv/preserve-paths",
   "description": "Composer plugin for preserving custom paths and supporting nested packages",
   "type": "composer-plugin",
   "keywords": [
@@ -8,23 +8,21 @@
     "custom path",
     "nested package"
   ],
-  "homepage": "https://github.com/drupal-composer/preserve-paths",
+  "homepage": "https://github.com/convertiv/preserve-paths",
   "license": "GPL-2.0+",
-  "authors": [
-    {
-      "name": "Johannes Haseitl",
-      "email": "johannes@undpaul.de",
-      "homepage": "http://www.undpaul.de"
-    }
-  ],
+  "authors": [{
+    "name": "Johannes Haseitl",
+    "email": "johannes@undpaul.de",
+    "homepage": "http://www.undpaul.de"
+  }],
   "support": {
-    "issues": "https://github.com/drupal-composer/preserve-paths/issues"
+    "issues": "https://github.com/convertiv/preserve-paths/issues"
   },
   "require": {
-    "composer-plugin-api": "^1.0"
+    "composer-plugin-api": "^2.0"
   },
   "require-dev": {
-    "composer/composer": "1.*",
+    "composer/composer": "2.*",
     "phpunit/phpunit": "4.*",
     "derhasi/tempdirectory": "0.1.*",
     "squizlabs/php_codesniffer": "2.*",
@@ -32,10 +30,10 @@
   },
   "autoload": {
     "psr-4": {
-      "DrupalComposer\\PreservePaths\\": "src/"
+      "Convertiv\\PreservePaths\\": "src/"
     }
   },
   "extra": {
-    "class": "DrupalComposer\\PreservePaths\\Plugin"
+    "class": "Convertiv\\PreservePaths\\Plugin"
   }
 }

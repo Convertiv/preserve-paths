@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains DrupalComposer\PreservePaths\Plugin.
+ * Contains Convertiv\PreservePaths\Plugin.
  */
 
-namespace DrupalComposer\PreservePaths;
+namespace Convertiv\PreservePaths;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;
@@ -21,7 +21,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 {
 
     /**
-     * @var \DrupalComposer\PreservePaths\PluginWrapper
+     * @var \Convertiv\PreservePaths\PluginWrapper
      */
     protected $wrapper;
 
@@ -39,12 +39,12 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-        ScriptEvents::PRE_PACKAGE_INSTALL => 'prePackage',
-        ScriptEvents::POST_PACKAGE_INSTALL => 'postPackage',
-        ScriptEvents::PRE_PACKAGE_UPDATE => 'prePackage',
-        ScriptEvents::POST_PACKAGE_UPDATE => 'postPackage',
-        ScriptEvents::PRE_PACKAGE_UNINSTALL => 'prePackage',
-        ScriptEvents::POST_PACKAGE_UNINSTALL => 'postPackage',
+            ScriptEvents::PRE_PACKAGE_INSTALL => 'prePackage',
+            ScriptEvents::POST_PACKAGE_INSTALL => 'postPackage',
+            ScriptEvents::PRE_PACKAGE_UPDATE => 'prePackage',
+            ScriptEvents::POST_PACKAGE_UPDATE => 'postPackage',
+            ScriptEvents::PRE_PACKAGE_UNINSTALL => 'prePackage',
+            ScriptEvents::POST_PACKAGE_UNINSTALL => 'postPackage',
         );
     }
 

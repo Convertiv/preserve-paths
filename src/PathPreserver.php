@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \DrupalComposer\PreservePaths\PathPreserver
+ * Contains \Convertiv\PreservePaths\PathPreserver
  */
 
-namespace DrupalComposer\PreservePaths;
+namespace Convertiv\PreservePaths;
 
 /**
  * Class PathPreserver
@@ -99,8 +99,8 @@ class PathPreserver
                 continue;
             }
 
-            $unique = $installPath.' '.uniqid('', true);
-            $cacheRoot = $this->filesystem->normalizePath($this->cacheDir.'/preserve-paths/'.sha1($unique));
+            $unique = $installPath . ' ' . uniqid('', true);
+            $cacheRoot = $this->filesystem->normalizePath($this->cacheDir . '/preserve-paths/' . sha1($unique));
             $this->filesystem->ensureDirectoryExists($cacheRoot);
 
             // Before we back paths up, we need to make sure, permissions are
@@ -108,7 +108,7 @@ class PathPreserver
             $this->preparePathPermissions($relevantPaths);
 
             foreach ($relevantPaths as $original) {
-                $backupLocation = $cacheRoot.'/'.sha1($original);
+                $backupLocation = $cacheRoot . '/' . sha1($original);
                 $this->filesystem->rename($original, $backupLocation);
                 $this->backups[$original] = $backupLocation;
             }
@@ -177,7 +177,7 @@ class PathPreserver
     public static function fileExists($path)
     {
 
-      // Get all parent directories.
+        // Get all parent directories.
         $folders = array();
         $resetPerms = array();
         $folder = $path;
