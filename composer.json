@@ -11,10 +11,16 @@
   "homepage": "https://github.com/convertiv/preserve-paths",
   "license": "GPL-2.0+",
   "authors": [{
-    "name": "Johannes Haseitl",
-    "email": "johannes@undpaul.de",
-    "homepage": "http://www.undpaul.de"
-  }],
+      "name": "Johannes Haseitl",
+      "email": "johannes@undpaul.de",
+      "homepage": "http://www.undpaul.de"
+    },
+    {
+      "name": "Brad Mering",
+      "email": "brad@convertiv.com",
+      "homepage": "http://www.convertiv.com"
+    }
+  ],
   "support": {
     "issues": "https://github.com/convertiv/preserve-paths/issues"
   },
