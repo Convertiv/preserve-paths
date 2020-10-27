@@ -28,7 +28,7 @@
     "composer-plugin-api": "^2.0"
   },
   "require-dev": {
-    "composer/composer": "2.*",
+    "composer/composer": "^1.0 || ^2.0",
     "phpunit/phpunit": "4.*",
     "derhasi/tempdirectory": "0.1.*",
     "squizlabs/php_codesniffer": "2.*",
